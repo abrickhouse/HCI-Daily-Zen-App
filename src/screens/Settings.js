@@ -10,24 +10,36 @@ function Settings() {
    <Nav name={name} />
    <div className="mx-2">
     <h2>Settings</h2>
-    profile info
-    <br />
-    username
-    <br />
-    password
-    <br />
-    email
-    <br />
-    manage notifications
-    <br />
-    delete account
     {name ? (
-     <Link to={`/home`}>
-      <button class="btnx my-4 px-2 mx-2">Log Out</button>
-     </Link>
+     <div>
+      Change challenge category
+      <br />
+      Change password
+      <br />
+      Change email
+      <br />
+      Notifications
+      <br />
+      Manage Friends
+      <br /> Log out
+      <br />
+      Delete account
+      <Link to={`/home`}>
+       <button class="btn my-4 px-2 mx-2">Log Out</button>
+      </Link>
+     </div>
     ) : (
-     <div />
+     <div>
+      <Link to={`/login`}>
+       <button class="btn btn-light px-4 btnx">Log in</button>
+      </Link>
+      <br />{" "}
+      <Link to={`/signup`}>
+       <button class="btn">Sign up</button>
+      </Link>
+     </div>
     )}
+    <div />
    </div>
   </div>
  );

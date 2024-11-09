@@ -3,6 +3,7 @@ import { HashRouter } from "react-router-dom";
 import { Routes, Route } from "react-router";
 import Home from "./screens/Home";
 import Signup from "./screens/Signup";
+import LogIn from "./screens/Login";
 import Settings from "./screens/Settings";
 import Community from "./screens/Community";
 import Profile from "./screens/Profile";
@@ -13,6 +14,7 @@ function App() {
    <div class="body">
     <Routes>
      <Route path="/signup" element={<Signup />} />
+     <Route path="/login" element={<LogIn />} />
      <Route path="/home/:name" element={<Home />} />
      <Route path="/home/" element={<Home />} />
      <Route path="/" element={<Home />} />
