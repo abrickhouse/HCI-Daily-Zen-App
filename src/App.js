@@ -7,6 +7,7 @@ import LogIn from "./screens/Login";
 import Settings from "./screens/Settings";
 import Community from "./screens/Community";
 import Profile from "./screens/Profile";
+import Friends from "./screens/Friends";
 
 function App() {
  return (
@@ -24,6 +25,7 @@ function App() {
      <Route path="/community/" element={<Community />} />
      <Route path="/profile/:name" element={<Profile />} />
      <Route path="/profile/" element={<Profile />} />
+     <Route path="/add-friends" element={<Friends />} />
     </Routes>
    </div>
   </HashRouter>

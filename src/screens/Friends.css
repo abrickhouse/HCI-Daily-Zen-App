@@ -1,0 +1,109 @@
+/* Friends.css */
+
+.add-friends-container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .back-button {
+    background-color: #f0f0f0;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    margin-bottom: 20px;
+  }
+  
+  .add-friends-content {
+    display: flex;
+    gap: 40px;
+  }
+  
+  /* Add Friend Section */
+  .add-friend-section, .friend-requests-section {
+    flex: 1;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .add-friend-section h2, .friend-requests-section h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  
+  .search-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    margin: 15px 0;
+  }
+  
+  .friend-suggestion, .friend-request {
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    border-top: 1px solid #eee;
+  }
+  
+  .profile-circle {
+    width: 50px;
+    height: 50px;
+    background-color: #e0e0e0;
+    border-radius: 50%;
+    margin-right: 15px;
+  }
+  
+  .friend-info {
+    flex-grow: 1;
+  }
+  
+  .friend-name {
+    font-weight: bold;
+  }
+  
+  .friend-username {
+    color: #666;
+  }
+  
+  /* Button styles */
+  .add-button, .accept-button, .reject-button {
+    background-color: #f0f0f0;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  .add-button {
+    display: flex;
+    align-items: center;
+  }
+  
+  .accept-button, .reject-button {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 20px;
+    margin-left: 10px;
+  }
+  
+  .accept-button {
+    background-color: #d4edda;
+    color: #28a745;
+  }
+  
+  .reject-button {
+    background-color: #f8d7da;
+    color: #dc3545;
+  }
+  
