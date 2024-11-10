@@ -11,28 +11,34 @@ function Nav(props) {
   <nav className="nav list-group text-center sidebar py-4">
    {name ? (
     <Link
-     className={`nav-link ${pathname.includes("profile") && "active bg-white"}`}
+     className={`nav-link px-3 ${
+      pathname.includes("profile") && "active bg-white"
+     }`}
      to={`/profile/${name}`}
     >
      <FontAwesomeIcon icon={faUser} size="9x" />
      <h3>Hi {name}!</h3>{" "}
     </Link>
    ) : (
-    <Link className="nav-link black-" to="/signup">
+    <Link className="nav-link black-  px-3" to="/login">
      <FontAwesomeIcon icon={faUserSecret} fade size="9x" />
      <h3>Log In</h3>
     </Link>
    )}
    {name ? (
     <Link
-     className={`nav-link ${pathname.includes("home") && "active bg-white"}`}
+     className={`nav-link px-3 ${
+      pathname.includes("home") && "active bg-white"
+     }`}
      to={`/home/${name}`}
     >
      <h3>Home</h3>
     </Link>
    ) : (
     <Link
-     className={`nav-link ${pathname.includes("home") && "active bg-white"}`}
+     className={`nav-link px-3 ${
+      pathname.includes("home") && "active bg-white"
+     }`}
      to={`/home/`}
     >
      <h3>Home</h3>
@@ -40,7 +46,7 @@ function Nav(props) {
    )}
    {name ? (
     <Link
-     className={`nav-link ${
+     className={`nav-link px-3 ${
       pathname.includes("community") && "active bg-white"
      }`}
      to={`/community/${name}`}
@@ -49,7 +55,7 @@ function Nav(props) {
     </Link>
    ) : (
     <Link
-     className={`nav-link ${
+     className={`nav-link px-3 ${
       pathname.includes("community") && "active bg-white"
      }`}
      to="/community"
@@ -59,7 +65,7 @@ function Nav(props) {
    )}
    {name ? (
     <Link
-     className={`nav-link ${
+     className={`nav-link px-3 ${
       pathname.includes("settings") && "active bg-white"
      }`}
      to={`/settings/${name}`}
@@ -68,7 +74,7 @@ function Nav(props) {
     </Link>
    ) : (
     <Link
-     className={`nav-link ${
+     className={`nav-link px-3 ${
       pathname.includes("settings") && "active bg-white"
      }`}
      to="/settings"

@@ -5,31 +5,47 @@ import { useState } from "react";
 function Signup() {
  const [username, setUsername] = useState();
  return (
-  <div className="wd-flex-row-container text-center mx-5">
-   {" "}
-   <div>
-    <h2>Sign Up</h2>
-    Welcome
-    <br />
-    enter username
-    <input
-     class="form-control my-2"
-     placeholder="Enter username..."
-     type="text"
-     onChange={(e) => setUsername(e.target.value)}
-    ></input>{" "}
-    <br />
-    enter password
-    <br />
-    enter email
-    <br />
-    ...[next]
-    <br />
-    upon completion should lead back to home page (pass in name/username)
-    <br />
-    <Link to={`/home/${username}`}>
-     <button class="btnx my-4 px-2 mx-2">Save</button>
-    </Link>
+  <div className="input-screen p-5 text-center">
+   <h1 className="mainheader py-2">Welcome!</h1>
+   <h6 className="py-2">Let's get some information about you</h6>
+   <div className="wd-flex-row-container text-center p-4 input-card">
+    <div>
+     <input
+      class="form-control form-control-lg m-2 my-3 wide"
+      placeholder="Name..."
+      type="text"
+     ></input>{" "}
+     <input
+      class="form-control form-control-lg m-2 my-3 wide"
+      placeholder="Username..."
+      type="text"
+      onChange={(e) => setUsername(e.target.value)}
+     ></input>{" "}
+     <input
+      class="form-control form-control-lg m-2 my-3 wide"
+      placeholder="Email..."
+      type="text"
+     ></input>{" "}
+     <input
+      class="form-control form-control-lg m-2 my-3 wide"
+      placeholder="Password..."
+      type="password"
+     ></input>{" "}
+     <input
+      class="form-control form-control-lg m-2 my-3 wide"
+      placeholder="Confirm Password..."
+      type="password"
+     ></input>{" "}
+     {username ? (
+      <Link to={`/signup2/${username}`}>
+       <button class="btn btn-dark btnx-d px-4 mx-2 btn-lg">Next</button>
+      </Link>
+     ) : (
+      <button class="btn btn-dark btnx-d px-4 mx-2 btn-lg" disabled>
+       Next
+      </button>
+     )}
+    </div>
    </div>
   </div>
  );

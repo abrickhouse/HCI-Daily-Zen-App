@@ -8,6 +8,9 @@ import Settings from "./screens/Settings";
 import Community from "./screens/Community";
 import Profile from "./screens/Profile";
 import Friends from "./screens/Friends";
+import DeleteAcc from "./screens/DeleteAcc";
+import SignupChoose from "./screens/SignupChoose";
+import SignupFriends from "./screens/SignupFriends";
 
 function App() {
  return (
@@ -26,6 +29,9 @@ function App() {
      <Route path="/profile/:name" element={<Profile />} />
      <Route path="/profile/" element={<Profile />} />
      <Route path="/add-friends" element={<Friends />} />
+     <Route path="/deleted" element={<DeleteAcc />} />
+     <Route path="/signup2/:name" element={<SignupChoose />} />
+     <Route path="/signup3/:name" element={<SignupFriends />} />
     </Routes>
    </div>
   </HashRouter>

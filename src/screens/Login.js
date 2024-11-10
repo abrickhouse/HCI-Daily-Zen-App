@@ -5,31 +5,29 @@ import { useState } from "react";
 function LogIn() {
  const [username, setUsername] = useState();
  return (
-  <div className="wd-flex-row-container text-center mx-5">
-   {" "}
-   <div>
-    <h2>Log In</h2>
-    Welcome
-    <br />
-    enter username
+  <div className="input-screen p-5 text-center">
+   <h1 className="mainheader py-4">Welcome Back!</h1>
+   <div className="wd-flex-row-container text-center p-4 input-card row">
     <input
-     class="form-control my-2"
-     placeholder="Enter username..."
+     class="form-control form-control-lg mx-2 wide"
+     placeholder="Username..."
      type="text"
      onChange={(e) => setUsername(e.target.value)}
-    ></input>{" "}
-    <br />
-    enter password
-    <br />
-    enter email
-    <br />
-    ...[next]
-    <br />
-    upon completion should lead back to home page (pass in name/username)
-    <br />
-    <Link to={`/home/${username}`}>
-     <button class="btnx my-4 px-2 mx-2">Enter</button>
-    </Link>
+    ></input>
+    <input
+     class="form-control form-control-lg m-2 my-3 wide"
+     placeholder="Password..."
+     type="password"
+    ></input>
+    {username ? (
+     <Link to={`/home/${username}`}>
+      <button class="btn btn-dark btnx-d px-4 mx-2 btn-lg">Login</button>
+     </Link>
+    ) : (
+     <button class="btn btn-dark btnx-d px-4 mx-2 btn-lg" disabled>
+      Login
+     </button>
+    )}
    </div>
   </div>
  );

@@ -1,6 +1,5 @@
 .App {
  text-align: center;
- background-color: aquamarine;
 }
 .nav-link {
  color: rgb(33, 33, 33);
@@ -13,15 +12,13 @@
  color: rgb(129, 67, 253);
 }
 
-.active {
- background-color: brown;
-}
-
 .sidebar {
  height: 100vh;
- background-color: rgb(156, 255, 238);
+ top: 0px;
+ background-color: rgb(185, 246, 201);
  width: 20%;
  min-width: fit-content;
+ position: sticky;
 }
 .wd-flex-row-container {
  display: flex;
@@ -30,6 +27,88 @@
 
 .btnx {
  border-radius: 40%;
- background-color: #acabab;
+ background-color: #d1d1d1;
  font-weight: 700;
+ padding: 8px 16px;
+ border-radius: 16px;
+ cursor: pointer;
+ border: none;
+}
+
+.btnx-d {
+ border-radius: 40%;
+ background-color: #000;
+ font-weight: 700;
+ padding: 8px 16px;
+ border-radius: 16px;
+ cursor: pointer;
+ border: none;
+}
+
+.mainheader {
+ margin: auto;
+ font-size: 24px;
+ font-weight: bold;
+}
+
+.input-screen {
+ position: absolute;
+ background-color: #d9d9d9;
+ min-height: 100vh;
+ width: 100vw;
+ text-align: center;
+}
+.input-card {
+ background-color: #fff;
+ margin: auto;
+ border-radius: 20px;
+ width: 350px;
+ height: fit-content;
+ align-items: center;
+ justify-content: center;
+}
+.delete-btn:hover {
+ background-color: #9a3838;
+}
+.modal-overlay {
+ position: fixed;
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 100%;
+ background-color: rgba(0, 0, 0, 0.8);
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ z-index: 1000;
+}
+
+/* Modal content */
+.modal-content {
+ position: relative;
+ background-color: white;
+ padding: 20px;
+ border-radius: 8px;
+ box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+ max-width: 90%;
+ max-height: 90%;
+ overflow: auto;
+}
+
+.modal-card {
+ width: fit-content;
+}
+.del-screen {
+ background-color: #000000;
+ color: #fff;
+ height: 100vh;
+ width: 100%;
+ text-align: center;
+}
+.mid-txt {
+ text-align: center;
+ width: 350px;
+}
+.wide {
+ width: 95%;
 }
