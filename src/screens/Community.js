@@ -1,35 +1,18 @@
-// import Nav from "../Nav";
-// import { useParams } from "react-router-dom";
-
-// function Community() {
-//  const { name } = useParams();
-//  return (
-//   <div className="wd-flex-row-container">
-//    {" "}
-//    <Nav name={name} />
-//    <div className="mx-2">
-//     <h2>My Community</h2>a couple static examples of community posts (should be
-//     able to click on them as in figma)
-//     <br />
-//     ability to search for freinds?
-//    </div>
-//   </div>
-//  );
-// }
-// export default Community;
-
-
 // import React, { useState } from "react";
 // import Nav from "../Nav";
-// import { useParams } from "react-router-dom";
-// import "./Community.css"; // Import the specific Community styles
+// import { useParams, useNavigate } from "react-router-dom"; // Import useNavigate
+// import "./Community.css"; // Ensure you import the specific Community styles
+
 
 // function Community() {
 //   const { name } = useParams();
+//   const navigate = useNavigate(); // Initialize navigate
 
 //   // State to control modal visibility and selected image URL
 //   const [isModalOpen, setIsModalOpen] = useState(false);
 //   const [selectedImageUrl, setSelectedImageUrl] = useState(null);
+
+//   const [acceptedFriends, setAcceptedFriends] = useState([]);
 
 //   // Mock data for the community feed
 //   const posts = [
@@ -54,14 +37,24 @@
 //       content: "Went for a run and I had to share this beautiful view.",
 //       imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZ99fe1lR80Q7WndjuIBPdP0r4_vjBVhkhLg&s",
 //     },
-    // {
-    //     id: 4,
-    //     name: "Traci Johnson",
-    //     time: "1 day ago",
-    //     content: "Just played my daily challenge game. What a good way to relax.",
-    //     imageUrl: null,
-    //   },
+//     {
+//         id: 4,
+//         name: "Traci Johnson",
+//         time: "1 day ago",
+//         content: "Just played my daily challenge game. What a good way to relax.",
+//         imageUrl: null,
+//       },
 //   ];
+
+//   // Callback to handle adding a friend
+//   const handleAcceptFriend = (friend) => {
+//     setAcceptedFriends((prevAcceptedFriends) => [...prevAcceptedFriends, friend]);
+//   };
+
+//     // Filter posts based on accepted friends
+//   const filteredPosts = posts.filter((post) =>
+//     acceptedFriends.some((friend) => friend.name === post.name)
+//   );
 
 //   // Function to open the modal with the selected image URL
 //   const handleImageClick = (url) => {
@@ -83,7 +76,13 @@
 //       <div className="main-content">
 //         <header className="community-header">
 //           <h2>Community</h2>
-//           <button className="add-friends-button">Add Friends</button>
+//           {/* Add Friends button with navigation to /add-friends */}
+//           <button
+//             className="add-friends-button"
+//             onClick={() => navigate("/add-friends")} // Navigates to AddFriends page
+//           >
+//             Add Friends
+//           </button>
 //         </header>
         
 //         <div className="post-list">
@@ -123,58 +122,32 @@
 
 // export default Community;
 
+
 import React, { useState } from "react";
+import { useParams, useNavigate } from "react-router-dom";
+import { useFriends } from "./FriendsRequest"; // Import useFriends
 import Nav from "../Nav";
-import { useParams, useNavigate } from "react-router-dom"; // Import useNavigate
-import "./Community.css"; // Ensure you import the specific Community styles
+import "./Community.css";
 
 function Community() {
   const { name } = useParams();
-  const navigate = useNavigate(); // Initialize navigate
+  const navigate = useNavigate();
+  const { posts, friends } = useFriends(); // Access posts and friends
 
-  // State to control modal visibility and selected image URL
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedImageUrl, setSelectedImageUrl] = useState(null);
 
-  // Mock data for the community feed
-  const posts = [
-    {
-      id: 1,
-      name: "John Smith",
-      time: "4 hr ago",
-      content: "Completed today's challenge! Check out this picture I took from my walk!",
-      imageUrl: "https://images.squarespace-cdn.com/content/v1/5f3c0621820809510f9daf0d/322e8285-a061-45c3-b11d-f6952b8f8228/Forest.jpg?format=2500w",
-    },
-    {
-      id: 2,
-      name: "Dylan Parks",
-      time: "10 hr ago",
-      content: "I AM HAPPY TO SHARE MY 5 MINUTE YOGA EXPERIENCE. IT WAS FASCINATING. Will do again!!",
-      imageUrl: null,
-    },
-    {
-      id: 3,
-      name: "Patty Green",
-      time: "23 hr ago",
-      content: "Went for a run and I had to share this beautiful view.",
-      imageUrl: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZ99fe1lR80Q7WndjuIBPdP0r4_vjBVhkhLg&s",
-    },
-    {
-        id: 4,
-        name: "Traci Johnson",
-        time: "1 day ago",
-        content: "Just played my daily challenge game. What a good way to relax.",
-        imageUrl: null,
-      },
+  // Combine community posts with posts from friends
+  const allPosts = [
+    ...posts,
+    ...friends.flatMap(friend => friend.posts || []), // Assume friends have posts
   ];
 
-  // Function to open the modal with the selected image URL
   const handleImageClick = (url) => {
     setSelectedImageUrl(url);
     setIsModalOpen(true);
   };
 
-  // Function to close the modal
   const handleCloseModal = () => {
     setIsModalOpen(false);
     setSelectedImageUrl(null);
@@ -188,17 +161,16 @@ function Community() {
       <div className="main-content">
         <header className="community-header">
           <h2>Community</h2>
-          {/* Add Friends button with navigation to /add-friends */}
           <button
             className="add-friends-button"
-            onClick={() => navigate("/add-friends")} // Navigates to AddFriends page
+            onClick={() => navigate("/add-friends")}
           >
             Add Friends
           </button>
         </header>
         
         <div className="post-list">
-          {posts.map((post) => (
+          {allPosts.map((post) => (
             <div key={post.id} className="post">
               <div className="post-header">
                 <span className="post-name">{post.name}</span>
@@ -218,7 +190,6 @@ function Community() {
           ))}
         </div>
 
-        {/* Modal for viewing the full image */}
         {isModalOpen && (
           <div className="modal-overlay" onClick={handleCloseModal}>
             <div className="modal-content" onClick={(e) => e.stopPropagation()}>
@@ -233,4 +204,3 @@ function Community() {
 }
 
 export default Community;
-
