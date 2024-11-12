@@ -115,3 +115,23 @@
  width: 230px;
  margin: auto;
 }
+.remove-link-style {
+ text-decoration: none;
+ --bs-list-group-border-color: white;
+}
+
+.max-set-height {
+ max-height: 450px;
+}
+.stick {
+ position: sticky;
+ width: 300px;
+ top: 10px;
+ left: 50px;
+}
+.stick2 {
+ position: sticky;
+ width: 300px;
+ bottom: 5px;
+ left: 50px;
+}

@@ -21,56 +21,46 @@ function Settings() {
      {name ? (
       <div class="">
        <ul class="list-group list-group-flush py-4 wide">
-        <li class="list-group-item py-3">
-         <div className="d-flex justify-content-between">
-          Change challenge category
+        <Link className="remove-link-style" to={`/change-email/${name}`}>
+         <li class="list-group-item py-3 d-flex justify-content-between">
+          <h4>Change email</h4>
           <FontAwesomeIcon
            icon={faChevronRight}
-           className="align-r"
+           className="float-end mx-5"
            size="1x"
           />
-         </div>
-        </li>
-        <li class="list-group-item py-3">
-         <div className="d-flex justify-content-between">
-          Change password
+         </li>
+        </Link>
+        <Link className="remove-link-style" to={`/change-password/${name}`}>
+         <li class="list-group-item py-3 d-flex justify-content-between">
+          <h4>Change password</h4>
           <FontAwesomeIcon
            icon={faChevronRight}
-           className="align-r"
+           className="float-end mx-5"
            size="1x"
           />
-         </div>
-        </li>
-        <li class="list-group-item py-3">
-         <div className="d-flex justify-content-between">
-          Change email
+         </li>
+        </Link>
+        <Link className="remove-link-style" to={`/notifications/${name}`}>
+         <li class="list-group-item py-3 d-flex justify-content-between">
+          <h4>Notifications</h4>
           <FontAwesomeIcon
            icon={faChevronRight}
-           className="align-r"
+           className="float-end mx-5"
            size="1x"
           />
-         </div>
-        </li>
-        <li class="list-group-item py-3">
-         <div className="d-flex justify-content-between">
-          Notifications
+         </li>
+        </Link>
+        <Link className="remove-link-style" to={`/manage-friends/${name}`}>
+         <li class="list-group-item py-3 d-flex justify-content-between">
+          <h4>Manage friends</h4>
           <FontAwesomeIcon
            icon={faChevronRight}
-           className="align-r"
+           className="float-end mx-5"
            size="1x"
           />
-         </div>
-        </li>
-        <li class="list-group-item py-3">
-         <div className="d-flex justify-content-between">
-          Manage friends
-          <FontAwesomeIcon
-           icon={faChevronRight}
-           className="align-r"
-           size="1x"
-          />
-         </div>
-        </li>
+         </li>
+        </Link>
        </ul>
        <Link to={`/settings`}>
         <button class="btn btn-light px-4 m-2 btnx">Log out</button>
@@ -86,13 +76,13 @@ function Settings() {
         <div className="modal-overlay" onClick={() => setIsModalOpen(false)}>
          <div class="card modal-card modal-content p-4">
           <div>
-           <h5 class="modal-title  mx-2">Are you sure?</h5>
+           <h5 class="modal-title mx-2">Are you sure?</h5>
           </div>
           <div class="modal-body mx-2">This is a permenant action.</div>
           <div class="modal-footer">
            <button
             type="button"
-            class="btn btn-secondary m-2  my-3 btnx"
+            class="btn btn-secondary m-2 my-3 btnx"
             data-dismiss="modal"
             onClick={() => setIsModalOpen(false)}
            >
@@ -124,7 +114,6 @@ function Settings() {
        </Link>
       </div>
      )}
-     <div />
     </div>
    </div>
   </div>
