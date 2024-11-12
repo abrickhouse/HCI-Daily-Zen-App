@@ -157,51 +157,48 @@ function Community() {
    <div className="nav-container">
     <Nav name={name} />
    </div>
-   <div>
-    <Header name={name} />
-    <div className="main-content">
-     <header className="community-header">
-      <h2>Community</h2>
-      <button
-       className="add-friends-button"
-       onClick={() => navigate("/add-friends")}
-      >
-       Add Friends
-      </button>
-     </header>
+   <div className="main-content">
+    <header className="community-header">
+     <h2>Community</h2>
+     <button
+      className="add-friends-button"
+      onClick={() => navigate("/add-friends")}
+     >
+      Add Friends
+     </button>
+    </header>
 
-     <div className="post-list">
-      {allPosts.map((post) => (
-       <div key={post.id} className="post">
-        <div className="post-header">
-         <span className="post-name">{post.name}</span>
-         <span className="post-time">{post.time}</span>
+    <div className="post-list">
+     {allPosts.map((post) => (
+      <div key={post.id} className="post">
+       <div className="post-header">
+        <span className="post-name">{post.name}</span>
+        <span className="post-time">{post.time}</span>
+       </div>
+       <div className="post-content">{post.content}</div>
+       {post.imageUrl && (
+        <div
+         className="post-image"
+         onClick={() => handleImageClick(post.imageUrl)}
+        >
+         <img src={post.imageUrl} alt="Post content" className="post-img" />
+         <div className="overlay-text">Click to view</div>
         </div>
-        <div className="post-content">{post.content}</div>
-        {post.imageUrl && (
-         <div
-          className="post-image"
-          onClick={() => handleImageClick(post.imageUrl)}
-         >
-          <img src={post.imageUrl} alt="Post content" className="post-img" />
-          <div className="overlay-text">Click to view</div>
-         </div>
-        )}
-       </div>
-      ))}
-     </div>
-
-     {isModalOpen && (
-      <div className="modal-overlay" onClick={handleCloseModal}>
-       <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-        <button className="close-button" onClick={handleCloseModal}>
-         Back
-        </button>
-        <img src={selectedImageUrl} alt="Full view" className="modal-image" />
-       </div>
+       )}
       </div>
-     )}
+     ))}
     </div>
+
+    {isModalOpen && (
+     <div className="modal-overlay" onClick={handleCloseModal}>
+      <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+       <button className="close-button" onClick={handleCloseModal}>
+        Back
+       </button>
+       <img src={selectedImageUrl} alt="Full view" className="modal-image" />
+      </div>
+     </div>
+    )}
    </div>
   </div>
  );
