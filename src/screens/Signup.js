@@ -1,11 +1,14 @@
 import { Link } from "react-router-dom";
-import Nav from "../Nav";
 import { useState } from "react";
+import logo from "../DailyZen.png";
 
 function Signup() {
  const [username, setUsername] = useState();
  return (
   <div className="input-screen p-5 text-center">
+   <Link to={`/home/`}>
+    <img src={logo} className="app-logo mx-auto d-block" alt="logo" />
+   </Link>
    <h1 className="mainheader py-2">Welcome!</h1>
    <h6 className="py-2">Let's get some information about you</h6>
    <div className="wd-flex-row-container text-center p-4 input-card">

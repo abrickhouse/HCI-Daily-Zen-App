@@ -1,10 +1,14 @@
 import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
+import logo from "../DailyZen.png";
 
 function SignupFriends() {
  const { name } = useParams();
  return (
   <div className="input-screen p-5 text-center">
+   <Link to={`/home/`}>
+    <img src={logo} className="app-logo mx-auto d-block" alt="logo" />
+   </Link>
    <h1 className="mainheader py-2">Let's Add Some Friends</h1>
    <h6 className="py-2">
     If you know anyone already using DailyZen, add them here to keep up with

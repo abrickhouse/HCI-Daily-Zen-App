@@ -1,11 +1,15 @@
 import { Link } from "react-router-dom";
 import Nav from "../Nav";
 import { useState } from "react";
+import logo from "../DailyZen.png";
 
 function LogIn() {
  const [username, setUsername] = useState();
  return (
   <div className="input-screen p-5 text-center">
+   <Link to={`/home/`}>
+    <img src={logo} className="app-logo mx-auto d-block" alt="logo" />
+   </Link>
    <h1 className="mainheader py-4">Welcome Back!</h1>
    <div className="wd-flex-row-container text-center p-4 input-card row">
     <input

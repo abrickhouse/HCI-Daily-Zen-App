@@ -71,7 +71,7 @@
  background-color: #9a3838;
 }
 .modal-overlay {
- position: fixed;
+ position: relative;
  top: 0;
  left: 0;
  width: 100%;
@@ -105,12 +105,11 @@
 .wide {
  width: 95%;
 }
-.nav-head {
-}
 .nav-header {
  background-color: #fff;
  width: 100vw;
  justify-content: center;
+ z-index: 900;
 }
 .app-logo {
  width: 230px;
