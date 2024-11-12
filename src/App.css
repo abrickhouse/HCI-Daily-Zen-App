@@ -15,7 +15,7 @@
 .sidebar {
  height: 100vh;
  top: 0px;
- background-color: rgb(185, 246, 201);
+ background-color: rgb(222, 252, 242);
  width: 20%;
  min-width: fit-content;
  position: sticky;
@@ -47,7 +47,7 @@
 
 .mainheader {
  margin: auto;
- font-size: 24px;
+ font-size: 54px;
  font-weight: bold;
 }
 
@@ -104,4 +104,15 @@
 }
 .wide {
  width: 95%;
+}
+.nav-head {
+}
+.nav-header {
+ background-color: #fff;
+ width: 100vw;
+ justify-content: center;
+}
+.app-logo {
+ width: 230px;
+ margin: auto;
 }
