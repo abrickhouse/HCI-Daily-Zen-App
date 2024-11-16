@@ -32,7 +32,7 @@ function App() {
       <Route path="/settings/" element={<Settings />} />
       <Route path="/community/:name" element={<Community />} />
       <Route path="/community/" element={<Community />} />
-      <Route path="/profile/:name" element={<Profile />} />
+      <Route path="/profile/:name/:other?" element={<Profile />} />
       <Route path="/profile/" element={<Profile />} />
       <Route path="/add-friends" element={<Friends />} />
       <Route path="/deleted" element={<DeleteAcc />} />

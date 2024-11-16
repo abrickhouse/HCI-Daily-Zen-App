@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useParams, useNavigate } from "react-router-dom";
+import { useParams, useNavigate, Link } from "react-router-dom";
 import { useFriends } from "./FriendsRequest"; // Import useFriends
 import Nav from "../Nav";
 import "./Community.css";
@@ -49,7 +49,7 @@ function Community() {
      {allPosts.map((post) => (
       <div key={post.id} className="post">
        <div className="post-header">
-        <span className="post-name">{post.name}</span>
+        <Link  className="post-name" to={`/Profile/${name}/${post.name}`}>{post.name}</Link>
         <span className="post-time">{post.time}</span>
        </div>
        <div className="post-content">{post.content}</div>
