@@ -14,7 +14,7 @@ function Settings() {
    <div className="nav-container">
     <Nav name={name} />
    </div>
-   <div>
+   <div className="content">
     <Header name={name} />
     <div className="mx-2 px-3 wide">
      <h2 className="mainheader">Settings</h2>

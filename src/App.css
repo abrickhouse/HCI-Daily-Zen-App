@@ -112,7 +112,7 @@
  z-index: 900;
 }
 .app-logo {
- width: 230px;
+ max-width: 230px;
  margin: auto;
 }
 .remove-link-style {

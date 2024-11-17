@@ -7,8 +7,10 @@ function Home() {
  return (
   <div className="wd-flex-row-container">
    {" "}
-   <Nav name={name} />
-   <div>
+   <div className="nav-container">
+    <Nav name={name} />
+   </div>
+   <div className="content">
     <Header name={name} />
     <div className="mx-2">
      <h2>home</h2>

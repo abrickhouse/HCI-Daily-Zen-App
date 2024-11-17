@@ -5,20 +5,22 @@ import logo from "./DailyZen.png";
 function Header() {
  const { name } = useParams();
  return (
-  <div className="d-flex justify-content-center sticky-top nav-header py-2">
-   {name ? (
-    <nav class="navbar navbar-light nav-head d-block">
+  <div className="navbar navbar-expand-lg navbar-light wide">
+   <nav class="navbar-header justify-content-center d-block w-100">
+    {name ? (
      <Link to={`/home/${name}`}>
-      <img src={logo} className="app-logo mx-auto d-block" alt="logo" />
+      <img
+       src={logo}
+       className="img-fluid app-logo mx-auto d-block"
+       alt="logo"
+      />
      </Link>
-    </nav>
-   ) : (
-    <nav class="navbar navbar-light nav-head d-block">
+    ) : (
      <Link to={`/home/`}>
       <img src={logo} className="app-logo mx-auto d-block" alt="logo" />
      </Link>
-    </nav>
-   )}
+    )}
+   </nav>
    <hr />
   </div>
  );
