@@ -28,9 +28,11 @@ function LogIn() {
       <button class="btn btn-dark btnx-d px-4 mx-2 btn-lg">Login</button>
      </Link>
     ) : (
-     <button class="btn btn-dark btnx-d px-4 mx-2 btn-lg" disabled>
-      Login
-     </button>
+     <Link to={`/login`}>
+      <button class="btn btn-dark btnx-d px-4 mx-2 btn-lg" disabled>
+       Login
+      </button>
+     </Link>
     )}
    </div>
   </div>

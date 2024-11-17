@@ -5,11 +5,32 @@
  color: rgb(33, 33, 33);
  text-decoration: none;
  font-size: small;
- padding: 5px;
+ padding: 15px;
+ transition: color 0.5s ease;
+ transition: background-color 0.65s ease;
 }
 
 .nav-link:hover {
- color: rgb(129, 67, 253);
+ color: rgb(40, 173, 164);
+ background-color: #fff;
+ transition: color 0.5s ease;
+ transition: background-color 0.65s ease;
+}
+
+.nav-btn {
+ color: rgb(33, 33, 33);
+ text-decoration: none;
+ border-radius: 40px;
+ font-size: small;
+ padding: 15px;
+ transition: color 0.5s ease;
+ transition: background-color 0.65s ease;
+}
+.nav-btn:hover {
+ color: rgb(40, 173, 164);
+ background-color: rgb(222, 252, 242);
+ transition: color 0.5s ease;
+ transition: background-color 0.65s ease;
 }
 
 .sidebar {
@@ -23,6 +44,10 @@
 .wd-flex-row-container {
  display: flex;
  flex-direction: row;
+}
+.profpic {
+ height: 145px;
+ border-radius: 70px;
 }
 
 .btnx {
@@ -69,6 +94,7 @@
 }
 .delete-btn:hover {
  background-color: #9a3838;
+ transition: background-color 0.5s ease;
 }
 .modal-overlay {
  position: relative;
@@ -118,6 +144,7 @@
 .remove-link-style {
  text-decoration: none;
  --bs-list-group-border-color: white;
+ z-index: 10;
 }
 
 .max-set-height {
@@ -134,4 +161,8 @@
  width: 300px;
  bottom: 5px;
  left: 50px;
+}
+
+.freeze {
+ max-width: 350px;
 }

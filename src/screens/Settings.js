@@ -19,10 +19,10 @@ function Settings() {
     <div className="mx-2 px-3 wide">
      <h2 className="mainheader">Settings</h2>
      {name ? (
-      <div class="">
-       <ul class="list-group list-group-flush py-4 wide">
-        <Link className="remove-link-style" to={`/change-email/${name}`}>
-         <li class="list-group-item py-3 d-flex justify-content-between">
+      <div className="">
+       <ul class=" py-4 wide">
+        <Link className=" remove-link-style" to={`/change-email/${name}`}>
+         <li class=" list-group-item py-3 d-flex justify-content-between">
           <h4>Change email</h4>
           <FontAwesomeIcon
            icon={faChevronRight}
@@ -62,7 +62,7 @@ function Settings() {
          </li>
         </Link>
        </ul>
-       <Link to={`/settings`}>
+       <Link to={`/home`}>
         <button class="btn btn-light px-4 m-2 btnx">Log out</button>
        </Link>
        <br />
@@ -72,35 +72,6 @@ function Settings() {
        >
         Delete account
        </button>
-       {isModalOpen && (
-        <div className="modal-overlay" onClick={() => setIsModalOpen(false)}>
-         <div class="card modal-card modal-content p-4">
-          <div>
-           <h5 class="modal-title mx-2">Are you sure?</h5>
-          </div>
-          <div class="modal-body mx-2">This is a permenant action.</div>
-          <div class="modal-footer">
-           <button
-            type="button"
-            class="btn btn-secondary m-2 my-3 btnx"
-            data-dismiss="modal"
-            onClick={() => setIsModalOpen(false)}
-           >
-            Cancel
-           </button>
-           <Link to={`/deleted`}>
-            <button
-             type="button"
-             class="btn btn-primary m-2 btnx-d delete-btn"
-             onClick={() => setIsModalOpen(false)}
-            >
-             Delete Account
-            </button>
-           </Link>
-          </div>
-         </div>
-        </div>
-       )}
       </div>
      ) : (
       <div>
@@ -116,6 +87,35 @@ function Settings() {
      )}
     </div>
    </div>
+   {isModalOpen && (
+    <div className="modal-overlay" onClick={() => setIsModalOpen(false)}>
+     <div class="card modal-card modal-content p-4">
+      <div>
+       <h5 class="modal-title mx-2">Are you sure?</h5>
+      </div>
+      <div class="modal-body mx-2">This is a permenant action.</div>
+      <div class="modal-footer">
+       <button
+        type="button"
+        class="btn btn-secondary m-2 my-3 btnx"
+        data-dismiss="modal"
+        onClick={() => setIsModalOpen(false)}
+       >
+        Cancel
+       </button>
+       <Link to={`/deleted`}>
+        <button
+         type="button"
+         class="btn btn-primary m-2 btnx-d delete-btn"
+         onClick={() => setIsModalOpen(false)}
+        >
+         Delete Account
+        </button>
+       </Link>
+      </div>
+     </div>
+    </div>
+   )}
   </div>
  );
 }
