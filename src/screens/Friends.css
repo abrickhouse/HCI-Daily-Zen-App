@@ -119,4 +119,16 @@
     z-index: 1000;
     font-size: 1rem;
   }
+
+  .logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px; 
+    }
+      
+  .logo {
+  width: 230px; 
+  height: auto;
+  }
   

@@ -150,3 +150,14 @@ a {
     color: inherit; /* Inherits the color from the parent element */
   }
   
+.logo-container {
+display: flex;
+justify-content: center;
+align-items: center;
+margin-top: 20px; /* Adjust as needed */
+}
+  
+.logo {
+width: 230px; /* Adjust size */
+height: auto;
+}

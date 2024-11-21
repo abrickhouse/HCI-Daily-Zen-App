@@ -150,6 +150,7 @@
 
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import logo from "../DailyZen.png";
 import { useFriends } from "./FriendsRequest"; // Import useFriends context
 import "./Friends.css";
 
@@ -185,6 +186,10 @@ function AddFriends() {
 
   return (
     <div className="add-friends-container">
+      <div className="logo-container">
+        <img src={logo} alt="Daily Zen Logo" className="logo" />
+      </div>
+      
       <button className="back-button" onClick={() => navigate(-1)}>Back</button>
 
       {notification && (
