@@ -1,106 +1,95 @@
 #helloName {
-    color: black;
-    font-size: 64px;
-    font-family: MADE Carving Soft PERSONAL USE;
-    font-weight: 700;
-    word-wrap: break-word
+ color: black;
+ font-size: 64px;
+ font-weight: 700;
+ word-wrap: break-word;
 }
 
 #name {
-    color: teal;
-    font-size: 64px;
-    font-family: MADE Carving Soft PERSONAL USE;
-    font-weight: 700;
-    word-wrap: break-word
-}
-
-h2 {
-    color: black;
-    font-size: 40px;
-    font-family: MADE Carving Soft PERSONAL USE;
-    font-weight: 700;
-    word-wrap: break-word
+ color: teal;
+ word-wrap: break-word;
 }
 
 #challengeDiv {
-    width: 100%;
-  
-    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 20px;
-    background-color: #e6e6e6;
-    height: 250px;
-    }
+ width: 100%;
+ box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+ border-radius: 20px;
+ background-color: #e6e6e6;
+ height: 250px;
+}
 
 #challenge {
-    width: 40%;
-    float: left;
-    margin: 25px;
-    border-radius: 20px;
-    background-color: #b1b1b1;
-    height: 200px;
-    cursor: pointer;
+ width: 40%;
+ float: left;
+ margin: 25px;
+ border-radius: 20px;
+ background-color: #b1b1b1;
+ height: 200px;
+ cursor: pointer;
 }
 
 #challengeName {
-    margin-left: 20px;
-    margin-top: 30px;
-    margin-bottom: 10px;
-    font-size: 24px;
-    font-family: 'MADE Carving Soft PERSONAL USE';
-    color: #000;
-    text-align: left;
-    display: inline-block;
+ font-size: 24px;
+ color: #000;
+ text-align: left;
 }
 
 #challengeDescription {
-    margin-left: 20px;
-    font-size: 20px;
-    font-family: 'MADE Carving Soft PERSONAL USE';
-    color: #000;
-    text-align: left, top;
-    display: inline-block;
+ margin-left: 20px;
+ font-size: 20px;
+ color: #000;
+ text-align: left, top;
 }
 
 .circle-container {
-    display: flex;
-    margin-top: 20px; /* Optional: Adds space between the heading and circles */
-  }
-  
-  .circle {
-    border-radius: 50%;
-    display: inline-block;
-    margin: 20px;
-  }
-  
-  .black-circle {
-    width: 200px; /* 100px radius * 2 */
-    height: 200px; /* 100px radius * 2 */
-    background-color: black;
-  }
-  
-  .grey-circle {
-    width: 100px; /* 50px radius * 2 */
-    height: 100px; /* 50px radius * 2 */
-    background-color: grey;
-    margin-top: 70px;
-  }
+ display: flex;
+ margin-top: 20px;
+}
 
-  .overlay {
-    position: absolute;
-    bottom: -150px;
-    width: 100px;
-    height: 100px;
-    background-color: grey;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .circle-text {
-    color: white;
-    font-family: MADE Carving Soft PERSONAL USE;
-    font-size: 16px; /* Adjust font size as needed */
-    font-weight: bold;
-  }
-  
+.circle {
+ border-radius: 50%;
+ display: inline-block;
+ margin: 20px;
+}
+
+.black-circle {
+ width: 200px;
+ height: 200px;
+ background-color: black;
+}
+
+.grey-circle {
+ width: 100px;
+ height: 100px;
+ background-color: grey;
+ margin-top: 70px;
+}
+.challengeBox {
+ width: 40%;
+ float: left;
+ border-radius: 15px;
+ background-color: #b1b1b1;
+ height: 80%;
+}
+
+.overlay {
+ position: absolute;
+ bottom: -150px;
+ width: 100px;
+ height: 100px;
+ background-color: grey;
+ border-radius: 50%;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+
+.circle-text {
+ color: white;
+ font-size: 16px;
+ font-weight: bold;
+}
+.maybeGame {
+ border-radius: 100px;
+ background-color: rgb(168, 255, 255);
+}

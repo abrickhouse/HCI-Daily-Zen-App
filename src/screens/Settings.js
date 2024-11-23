@@ -20,9 +20,9 @@ function Settings() {
      <h2 className="mainheader">Settings</h2>
      {name ? (
       <div className="">
-       <ul class=" py-4 wide">
-        <Link className=" remove-link-style" to={`/change-email/${name}`}>
-         <li class=" list-group-item py-3 d-flex justify-content-between">
+       <ul class="py-4 wide">
+        <Link className="remove-link-style" to={`/change-email/${name}`}>
+         <li class="list-group-item py-3 d-flex justify-content-between">
           <h4>Change email</h4>
           <FontAwesomeIcon
            icon={faChevronRight}

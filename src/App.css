@@ -76,6 +76,12 @@
  font-weight: bold;
 }
 
+.partheader {
+ margin: auto;
+ font-size: 34px;
+ font-weight: bold;
+}
+
 .input-screen {
  position: absolute;
  background-color: #d9d9d9;
@@ -165,4 +171,42 @@
 
 .freeze {
  max-width: 350px;
+}
+.edges {
+ border-radius: 30px;
+ height: 70%;
+}
+@keyframes glow-animation {
+ 0% {
+  box-shadow: 0 0 5px 0 rgba(255, 255, 255, 0.8);
+ }
+ 50% {
+  box-shadow: 0 0 20px 10px rgba(255, 255, 255, 1);
+ }
+ 100% {
+  box-shadow: 0 0 5px 0 rgba(255, 255, 255, 0.8);
+ }
+}
+.gratitude-item {
+ animation: glow-animation 1.5s ease-out infinite;
+}
+
+.progress-container {
+ position: relative;
+ display: inline-block;
+ margin-bottom: 20px;
+}
+
+.progress {
+ height: 30px;
+ max-width: 100%;
+ border-radius: 15px;
+}
+
+.progress-bar {
+ font-size: 1.25rem;
+ text-align: center;
+ line-height: 30px;
+ border-radius: 15px;
+ background-color: rgb(161, 243, 216);
 }

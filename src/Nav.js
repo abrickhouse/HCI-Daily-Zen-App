@@ -12,7 +12,6 @@ import prof from "./ab-prof.jpeg";
 function Nav(props) {
  const [name, setName] = useState(props.name);
  const [isFreezeModalOpen, setIsFreezeModalOpen] = useState(false);
- const [isStreakModalOpen, setIsStreakModalOpen] = useState(false);
  const { pathname } = useLocation();
  return (
   <nav className="nav list-group text-center sidebar d-flex">
@@ -44,7 +43,7 @@ function Nav(props) {
       <br />
       <h6>Freeze</h6>
      </button>
-     <button className="nav-link nav-btn py-0 px-2">
+     <button className="nav-link nav-btn py-0 px-2" disabled>
       <FontAwesomeIcon icon={fa7} size="3x" />
       <FontAwesomeIcon icon={faFire} size="3x" /> <br />
       <h6>Streak</h6>
