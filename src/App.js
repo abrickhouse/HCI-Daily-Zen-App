@@ -15,6 +15,7 @@ import { FriendsProvider } from "./screens/FriendsRequest";
 import SetFriend from "./screens/settingSubPages/setFriend";
 import SetNotif from "./screens/settingSubPages/setNotif";
 import SetEmail from "./screens/settingSubPages/setEmail";
+import DailyChallenge from "./screens/DailyChallenge"
 import SetPass from "./screens/settingSubPages/setPass";
 
 function App() {
@@ -42,6 +43,7 @@ function App() {
       <Route path="/notifications/:name" element={<SetNotif />} />
       <Route path="/change-email/:name" element={<SetEmail />} />
       <Route path="/change-password/:name" element={<SetPass />} />
+      <Route path="/daily-challenge/:name" element={<DailyChallenge />} />
      </Routes>
     </div>
    </HashRouter>

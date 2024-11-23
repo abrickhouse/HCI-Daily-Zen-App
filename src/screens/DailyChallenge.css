@@ -1,0 +1,61 @@
+h2 {
+    color: black;
+    font-size: 40px;
+    font-family: MADE Carving Soft PERSONAL USE;
+    font-weight: 700;
+    word-wrap: break-word
+}
+
+#ChallengeTitle {
+    margin-top: 0px;
+    margin-left: 200px;
+    width: 80%;
+}
+
+#backarrow {
+    margin:20px;
+}
+
+#logo-container {
+    display: flex;
+    justify-content: center;
+    width: screen;
+    align-items: center;
+    margin-top: 20px; /* Adjust as needed */
+    }
+      
+#logo {
+    width: 230px; /* Adjust size */
+    height: auto;
+    }
+
+#container {
+    display: flex;
+    margin-top: 100px;
+    justify-content: center;
+}
+
+
+#arrowLeft {
+    margin-right: 50px;
+    margin-top: 60px;
+    height: 50px;
+    cursor: pointer;
+}
+
+
+#arrowRight {
+    transform: rotate(180deg);
+    height: 50px;
+    margin-left: 50px;
+    margin-top: 60px;
+    cursor: pointer;
+}
+
+#pose {
+    border-radius: 25px;
+    margin-bottom: 100px;
+    height: 40%;
+    width: 40%;
+}
+    
