@@ -35,49 +35,97 @@ function Home() {
       <div className="">
        <div class="row">
         <div class="col">
-         <Link to={`/daily-challenge/color/${name}`}>
-          <div className="d-flex maybeGame align-items-center justify-content-center m-1">
-           <FontAwesomeIcon icon={faPalette} size="5x" />
-           <div className="px-4">
-            <h5>Mood</h5>
-            <p>Explore mood through color</p>
+         {name ? (
+          <Link to={`/daily-challenge/color/${name}`}>
+           <div className="d-flex maybeGame align-items-center justify-content-center m-1">
+            <FontAwesomeIcon icon={faPalette} size="5x" />
+            <div className="px-4">
+             <h5>Mood</h5>
+             <p>Explore mood through color</p>
+            </div>
            </div>
-          </div>
-         </Link>
+          </Link>
+         ) : (
+          <Link to={`/daily-challenge/color/`}>
+           <div className="d-flex maybeGame align-items-center justify-content-center m-1">
+            <FontAwesomeIcon icon={faPalette} size="5x" />
+            <div className="px-4">
+             <h5>Mood</h5>
+             <p>Explore mood through color</p>
+            </div>
+           </div>
+          </Link>
+         )}
         </div>
         <div class="col">
-         <Link to={`/daily-challenge/journal/${name}`}>
-          <div className="d-flex maybeGame align-items-center justify-content-center m-1">
-           <FontAwesomeIcon icon={faPen} size="5x" />
-           <div className="px-4">
-            <h5>Journal</h5>
-            <p>Record your thoughts</p>
+         {name ? (
+          <Link to={`/daily-challenge/journal/${name}`}>
+           <div className="d-flex maybeGame align-items-center justify-content-center m-1">
+            <FontAwesomeIcon icon={faPen} size="5x" />
+            <div className="px-4">
+             <h5>Journal</h5>
+             <p>Record your thoughts</p>
+            </div>
            </div>
-          </div>
-         </Link>
+          </Link>
+         ) : (
+          <Link to={`/daily-challenge/journal/`}>
+           <div className="d-flex maybeGame align-items-center justify-content-center m-1">
+            <FontAwesomeIcon icon={faPen} size="5x" />
+            <div className="px-4">
+             <h5>Journal</h5>
+             <p>Record your thoughts</p>
+            </div>
+           </div>
+          </Link>
+         )}
         </div>
         <div class="w-100"></div>
         <div class="col">
-         <Link to={`/daily-challenge/gratitude/${name}`}>
-          <div className="d-flex maybeGame align-items-center  justify-content-center m-1">
-           <FontAwesomeIcon icon={faHeartCircleBolt} size="5x" />
-           <div className="px-4">
-            <h5>Gratitude</h5>
-            <p>What drives you?</p>
+         {name ? (
+          <Link to={`/daily-challenge/gratitude/${name}`}>
+           <div className="d-flex maybeGame align-items-center  justify-content-center m-1">
+            <FontAwesomeIcon icon={faHeartCircleBolt} size="5x" />
+            <div className="px-4">
+             <h5>Gratitude</h5>
+             <p>What drives you?</p>
+            </div>
            </div>
-          </div>
-         </Link>
+          </Link>
+         ) : (
+          <Link to={`/daily-challenge/gratitude/`}>
+           <div className="d-flex maybeGame align-items-center  justify-content-center m-1">
+            <FontAwesomeIcon icon={faHeartCircleBolt} size="5x" />
+            <div className="px-4">
+             <h5>Gratitude</h5>
+             <p>What drives you?</p>
+            </div>
+           </div>
+          </Link>
+         )}
         </div>
         <div class="col">
-         <Link to={`/daily-challenge/yoga/${name}`}>
-          <div className="d-flex maybeGame align-items-center justify-content-center m-1">
-           <FontAwesomeIcon icon={faPerson} size="5x" />
-           <div className="px-4">
-            <h5>Yoga</h5>
-            <p>Move your body</p>
+         {name ? (
+          <Link to={`/daily-challenge/yoga/${name}`}>
+           <div className="d-flex maybeGame align-items-center justify-content-center m-1">
+            <FontAwesomeIcon icon={faPerson} size="5x" />
+            <div className="px-4">
+             <h5>Yoga</h5>
+             <p>Move your body</p>
+            </div>
            </div>
-          </div>
-         </Link>
+          </Link>
+         ) : (
+          <Link to={`/daily-challenge/yoga/`}>
+           <div className="d-flex maybeGame align-items-center justify-content-center m-1">
+            <FontAwesomeIcon icon={faPerson} size="5x" />
+            <div className="px-4">
+             <h5>Yoga</h5>
+             <p>Move your body</p>
+            </div>
+           </div>
+          </Link>
+         )}
         </div>
        </div>
       </div>

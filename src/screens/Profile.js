@@ -52,10 +52,10 @@ function Profile() {
     <div className="mx-2">
      <div className="wd-flex-row-container">
       <div>
-       {name ? (
-        <img src={prof} className="profilepic" alt="profile" />
-       ) : (
+       {other ? (
         <FontAwesomeIcon icon={faUser} size="10x" />
+       ) : (
+        <img src={prof} className="profilepic" alt="profile" />
        )}
       </div>
       <div className="info">

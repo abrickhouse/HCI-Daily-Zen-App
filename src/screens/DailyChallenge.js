@@ -47,25 +47,44 @@ function DailyChallenge({ component }) {
 
  const handleNope = () => {
   handleCloseModal();
-  navigate(`/home/${name}`);
+  if (name) {
+   navigate(`/home/${name}`);
+  } else {
+   navigate(`/home/`);
+  }
  };
 
  const handleShare = () => {
   handleCloseModal();
-  navigate(`/home/${name}`);
+  if (name) {
+   navigate(`/home/${name}`);
+  } else {
+   navigate(`/home/`);
+  }
  };
 
  return (
   <div className="wd-flex-row-container">
    <div className="nav-container long flex-column">
-    <Link id={"challengeLink"} className="" to={`/home/${name}`}>
-     <img
-      id="backarrow"
-      src={require("./assets/Backarrow.png")}
-      alt="return home"
-      className="p-5"
-     />
-    </Link>
+    {name ? (
+     <Link id={"challengeLink"} className="" to={`/home/${name}`}>
+      <img
+       id="backarrow"
+       src={require("./assets/Backarrow.png")}
+       alt="return home"
+       className="p-5"
+      />
+     </Link>
+    ) : (
+     <Link id={"challengeLink"} className="" to={`/home/`}>
+      <img
+       id="backarrow"
+       src={require("./assets/Backarrow.png")}
+       alt="return home"
+       className="p-5"
+      />
+     </Link>
+    )}
 
     {showFinishButton && (
      <div class="fixed-bottom py-4">

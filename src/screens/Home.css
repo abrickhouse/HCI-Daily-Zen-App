@@ -90,6 +90,13 @@
  color: #e8e1e0;
  height: 150px;
  padding: 30px;
+ transition: background-color 0.2s ease, transform 0.2s ease;
+}
+.maybeGame:hover {
+ border-radius: 30px;
+ background-color: #558078;
+ color: #e8e1e0;
+ transform: scale(1.03);
 }
 
 .challenge-text {

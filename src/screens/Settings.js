@@ -63,7 +63,7 @@ function Settings() {
         </Link>
        </ul>
        <Link to={`/home`}>
-        <button class="btn btn-secondary px-4 m-2 log-out-btn">Log out</button>
+        <button class="btn btn-secondary px-4 m-2 btnx">Log out</button>
        </Link>
        <br />
        <button

@@ -63,7 +63,23 @@ function App() {
         element={<DailyChallenge component={<ColorMood />} />}
        />
        <Route
-        path="/daily-challenge/gratitude/:name"
+        path="/daily-challenge/gratitude/"
+        element={<DailyChallenge component={<Gratitude />} />}
+       />
+       <Route
+        path="/daily-challenge/journal/"
+        element={<DailyChallenge component={<Journal />} />}
+       />
+       <Route
+        path="/daily-challenge/yoga/"
+        element={<DailyChallenge component={<Yoga />} />}
+       />
+       <Route
+        path="/daily-challenge/color/"
+        element={<DailyChallenge component={<ColorMood />} />}
+       />
+       <Route
+        path="/daily-challenge/gratitude/"
         element={<DailyChallenge component={<Gratitude />} />}
        />
       </Routes>

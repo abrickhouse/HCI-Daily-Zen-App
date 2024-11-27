@@ -128,38 +128,52 @@ function Community() {
     <div className="community-header">
      <h2 className="mainheader mx-2 px-3 wide text">Community</h2>
      <div>
-      <button
-       className="add-friend-btn white-text"
-       onClick={() => navigate("/add-friends")}
-      >
-       Add Friends
-      </button>
+      {name ? (
+       <button
+        className="add-friend-btn white-text"
+        onClick={() => navigate("/add-friends")}
+       >
+        Add Friends
+       </button>
+      ) : (
+       <button
+        className="add-friend-btn white-text"
+        onClick={() => navigate("/add-friends")}
+        disabled
+       >
+        Add Friends
+       </button>
+      )}
      </div>
     </div>
 
-    <div className="post-list mx-2 px-3">
-     {allPosts.map((post) => (
-      <div key={post.id} className="post">
-       <div className="post-header">
-        <Link className="post-name text" to={`/Profile/${name}/${post.name}`}>
-         <FontAwesomeIcon icon={faCircleUser} size="1x" className="zIcon" />{" "}
-         {post.name}
-        </Link>
-        <span className="post-time light-text">{post.time}</span>
-       </div>
-       <div className="post-content light-text">{post.content}</div>
-       {post.imageUrl && (
-        <div
-         className="post-image"
-         onClick={() => handleImageClick(post.imageUrl)}
-        >
-         <img src={post.imageUrl} alt="Post content" className="post-img" />
-         <div className="overlay-text">Click to view</div>
+    {name ? (
+     <div className="post-list mx-2 px-3">
+      {allPosts.map((post) => (
+       <div key={post.id} className="post">
+        <div className="post-header">
+         <Link className="post-name text" to={`/Profile/${name}/${post.name}`}>
+          <FontAwesomeIcon icon={faCircleUser} size="1x" className="zIcon" />{" "}
+          {post.name}
+         </Link>
+         <span className="post-time light-text">{post.time}</span>
         </div>
-       )}
-      </div>
-     ))}
-    </div>
+        <div className="post-content light-text">{post.content}</div>
+        {post.imageUrl && (
+         <div
+          className="post-image"
+          onClick={() => handleImageClick(post.imageUrl)}
+         >
+          <img src={post.imageUrl} alt="Post content" className="post-img" />
+          <div className="overlay-text">Click to view</div>
+         </div>
+        )}
+       </div>
+      ))}
+     </div>
+    ) : (
+     <p className="text px-5"> Log in to add friends!</p>
+    )}
 
     {isModalOpen && (
      <div className="modal-overlay" onClick={handleCloseModal}>
