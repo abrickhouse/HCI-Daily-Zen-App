@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 
 const ColorMood = () => {
  const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
- const [color, setColor] = useState("rgb(0, 0, 255)");
+ const [color, setColor] = useState("rgb(70, 112, 104)");
  const [speed, setSpeed] = useState(1);
  const [isMobile, setIsMobile] = useState(false);
 
@@ -51,13 +51,15 @@ const ColorMood = () => {
   <div style={containerStyle} className="edges">
    <div>
     <h1>Color Mood Exploration</h1>
-    <p>Move your mouse to change the colors dynamically.</p>
-    <p>Use the slider to adjust the speed of the transition.</p>
+    <p>
+     Move your mouse to change the colors dynamically.
+     <br />
+     Use the slider to adjust the speed of the transition.
+    </p>
+    <br />
+    <p>Try making the color that best represents your current mood.</p>
 
     <div className="mt-3">
-     <label htmlFor="speed" className="form-label">
-      Speed: {speed}s
-     </label>
      <input
       type="range"
       id="speed"
@@ -68,6 +70,9 @@ const ColorMood = () => {
       onChange={handleSpeedChange}
       className="form-range"
      />
+     <label htmlFor="speed" className="form-label">
+      Speed: {speed}s
+     </label>
     </div>
    </div>
   </div>

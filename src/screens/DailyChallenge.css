@@ -48,3 +48,14 @@
  height: 40%;
  width: 40%;
 }
+
+.finish-button {
+ position: fixed;
+ bottom: 20px;
+ right: 20px;
+ font-size: 18px;
+ padding: 10px 20px;
+}
+.long {
+ height: 100vh;
+}

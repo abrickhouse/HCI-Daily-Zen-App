@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser } from "@fortawesome/free-solid-svg-icons";
 import "./Profile.css";
 import React, { useState } from "react";
+import prof from "../ab-prof.jpeg";
 
 function Profile() {
  const { name, other } = useParams();
@@ -51,7 +52,11 @@ function Profile() {
     <div className="mx-2">
      <div className="wd-flex-row-container">
       <div>
-       <FontAwesomeIcon icon={faUser} size="10x" />
+       {name ? (
+        <img src={prof} className="profilepic" alt="profile" />
+       ) : (
+        <FontAwesomeIcon icon={faUser} size="10x" />
+       )}
       </div>
       <div className="info">
        <div className="wd-flex-row-container">
