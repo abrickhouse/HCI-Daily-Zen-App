@@ -33,7 +33,7 @@ const Gratitude = () => {
  return (
   <div className="container mt-5">
    <div className="text-center">
-    <h1>Mindful Drag-and-Drop Gratitude Board</h1>
+    <h1 className="text">Mindful Drag-and-Drop Gratitude Board</h1>
     <div className="mb-4">
      <input
       type="text"
@@ -43,7 +43,7 @@ const Gratitude = () => {
       placeholder="Add your own gratitude item..."
      />
      <button
-      className="btn btn-light me-3 btnx my-1"
+      className="btn btn-light me-3 add-friend-btn white-text my-1"
       onClick={handleAddCustomItem}
      >
       Add Custom Item
@@ -62,7 +62,7 @@ const Gratitude = () => {
       <h3>Mindful Space</h3>
       <MindfulSpace onDrop={handleDrop} droppedItems={droppedItems} />
       <button
-       className="btn btn-primary m-2 btnx-d delete-btn my-3"
+       className="btn btn-primary m-2 btnx my-3 white-text"
        onClick={handleClearMindfulSpace}
       >
        Clear Mindful Space

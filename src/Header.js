@@ -11,7 +11,7 @@ function Header() {
      <Link to={`/home/${name}`}>
       <img
        src={logo}
-       className="img-fluid app-logo mx-auto d-block"
+       className="img-fluid app-logo mx-auto d-block text"
        alt="logo"
       />
      </Link>

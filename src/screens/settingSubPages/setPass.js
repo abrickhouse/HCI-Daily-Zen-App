@@ -33,7 +33,7 @@ function SetPass() {
       <button class="btn btn-light btnx px-4 m-2 btn-lg">Cancel</button>
      </Link>
      <Link to={`/settings/${name}`}>
-      <button class="btn btn-dark btnx-d px-4 m-2 btn-lg">Save</button>
+      <button class="btn btn-dark btnx-d px-4 m-2 btn-lg save">Save</button>
      </Link>
     </div>
    </div>

@@ -13,7 +13,7 @@ function SetEmail() {
    <Link to={`/home/${name}`}>
     <img src={logo} className="app-logo mx-auto d-block" alt="logo" />
    </Link>
-   <h1 className="mainheader py-4">Change Email</h1>
+   <h1 className="mainheader py-4 text">Change Email</h1>
    <div className="wd-flex-row-container text-center p-4 input-card row">
     <input
      class="form-control form-control-lg m-2 wide"
@@ -40,7 +40,7 @@ function SetEmail() {
       <button class="btn btn-light btnx px-4 m-2 btn-lg">Cancel</button>
      </Link>
      <Link to={`/settings/${name}`}>
-      <button class="btn btn-dark btnx-d px-4 m-2 btn-lg">Save</button>
+      <button class="btn btn-dark btnx-d px-4 m-2 btn-lg save">Save</button>
      </Link>
     </div>
    </div>

@@ -31,8 +31,8 @@ const Yoga = () => {
   <div style={containerStyle} className="edges">
    <div className="wd-flex-row-container">
     <div className="w-100">
-     <h1> Yoga Challenge</h1>
-     <h3 className="my-4">
+     <h1 className="text"> Yoga Challenge</h1>
+     <h3 className="my-4 text">
       Today, practice yoga for a few minutes. Try hold each pose for at least 30
       seconds.
      </h3>

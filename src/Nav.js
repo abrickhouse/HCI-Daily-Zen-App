@@ -58,7 +58,7 @@ function Nav(props) {
      }`}
      to={`/home/${name}`}
     >
-     <h3>Home</h3>
+     <h3 className="text">Home</h3>
     </Link>
    ) : (
     <Link

@@ -51,36 +51,36 @@ function Profile() {
     <div className="mx-2">
      <div className="wd-flex-row-container">
       <div>
-       <FontAwesomeIcon icon={faUser} size="9x" />
+       <FontAwesomeIcon icon={faUser} size="10x" />
       </div>
       <div className="info">
        <div className="wd-flex-row-container">
         <div>
-         <h2>{username}</h2>
+         <h2 className="name" id="name">{username}</h2>
         </div>
         <div>{addFriend}</div>
        </div>
-       9 Friends
+       <span className="font-size">9 Friends</span>
        <br />
-       Joined Oct. 10, 2024
+       <span className="font-size">Joined Oct. 10, 2024</span>
        <br />
-       Challenges Completed 25
+       <span className="font-size">Challenges Completed 25</span>
        <br />
-       Longest Streak: 7
+       <span className="font-size">Longest Streak: 7</span>
       </div>
      </div>
     </div>
     {/* Calendar */}
-    <div>
-     <h3 className="month">November</h3>
+    <div className="cal-content">
+     <h1 className="month text">November</h1>
      <table className="calendar">
       <thead>
-       <tr>{weekdays}</tr>
+       <tr className="text">{weekdays}</tr>
        {days}
       </thead>
      </table>
-    </div>
    </div>
+    </div>
   </div>
  );
 }

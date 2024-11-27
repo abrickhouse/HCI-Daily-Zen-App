@@ -1,6 +1,5 @@
 .main-content {
     flex: 1;
-    padding: 20px; /* Padding around the main content area */
     background-color: #f5f5f5;
 }
 
@@ -8,21 +7,22 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 20px;
+    padding-bottom: 20px;
 }
 
 .community-header h2 {
-    font-size: 24px;
+    font-size: 54px;
     font-weight: bold;
 }
 
 .add-friends-button {
-    background-color: #e0e0e0;
+    background-color: #467068;
     border: none;
     padding: 8px 16px;
     border-radius: 16px;
     font-size: 14px;
     cursor: pointer;
+    width: 150px;
 }
 
 .post-list {
@@ -33,7 +33,7 @@
 
 /* Full-width post */
 .post {
-    background-color: #fff;
+    background-color: #AFC8A2;
     border-radius: 8px;
     padding: 16px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -52,10 +52,11 @@
 
 .post-name {
     font-weight: bold;
+    font-size: 25px;
 }
 
 .post-content {
-    font-size: 16px;
+    font-size: 20px;
     margin-bottom: 12px;
 }
 

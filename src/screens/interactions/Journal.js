@@ -55,8 +55,8 @@ const Journal = () => {
  return (
   <div className="container mt-5">
    <div className="text-center">
-    <h1>Mindful Journaling Prompt</h1>
-    <h3 className="my-4">{prompt}</h3>
+    <h1 text className="text"> Mindful Journaling Prompt</h1>
+    <h3 className="my-4 text">{prompt}</h3>
 
     <textarea
      className="form-control mb-3"
@@ -69,13 +69,13 @@ const Journal = () => {
      {!isTimerActive ? (
       <div>
        <button
-        className="btn  btn-light me-3 btnx"
+        className="btn btn-light me-3 btnx white-text"
         onClick={() => handleStartTimer(5)}
        >
         Start 5-Minute Timer
        </button>
        <button
-        className="btn  btn-light me-3 btnx"
+        className="btn btn-light me-3 btnx white-text"
         onClick={() => handleStartTimer(10)}
        >
         Start 10-Minute Timer

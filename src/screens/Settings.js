@@ -17,7 +17,7 @@ function Settings() {
    <div className="content">
     <Header name={name} />
     <div className="mx-2 px-3 wide">
-     <h2 className="mainheader">Settings</h2>
+     <h2 className="mainheader text">Settings</h2>
      {name ? (
       <div className="">
        <ul class="py-4 wide">
@@ -63,7 +63,7 @@ function Settings() {
         </Link>
        </ul>
        <Link to={`/home`}>
-        <button class="btn btn-light px-4 m-2 btnx">Log out</button>
+        <button class="btn btn-light px-4 m-2 log-out-btn">Log out</button>
        </Link>
        <br />
        <button

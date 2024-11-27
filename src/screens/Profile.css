@@ -27,7 +27,7 @@
 }
 
 .completed {
- background-color: #495057;
+ background-color: #AFC8A2;
  color: white;
  padding: 10px;
  font-weight: bold;
@@ -45,10 +45,7 @@
  color: #495057;
 }
 
-.month {
- /* text-align: center; */
- margin-left: 38%;
-}
+
 
 .content {
  border-radius: 8px;
@@ -62,26 +59,12 @@
  margin-left: 30px;
 }
 
-.add-friend-btn {
- background-color: #6c757d; /* Gray background */
- color: white; /* White text */
- border: none; /* No border */
- padding: 10px 20px; /* Adds space for an oval shape */
- font-size: 1rem; /* Adjust font size */
- font-weight: bold; /* Bold text */
- border-radius: 25px; /* High border-radius for an oval */
- cursor: pointer; /* Pointer cursor on hover */
- box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
- transition: background 0.2s ease, transform 0.2s ease; /* Smooth hover effect */
- margin-left: 20px;
+.name {
+    font-size: 50px;
 }
 
-.add-friend-btn:hover {
- background-color: #5a6268; /* Slightly darker gray on hover */
- transform: scale(1.05); /* Slight zoom on hover */
-}
-
-.add-friend-btn:active {
- transform: scale(1); /* Reset zoom on click */
- box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Lighter shadow on click */
+.cal-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }

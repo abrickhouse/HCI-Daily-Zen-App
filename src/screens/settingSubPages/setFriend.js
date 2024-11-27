@@ -23,7 +23,7 @@ function SetFriend() {
    <Link to={`/home/${name}`}>
     <img src={logo} className="app-logo mx-auto d-block" alt="logo" />
    </Link>
-   <h1 className="mainheader py-4">Manage Friends</h1>
+   <h1 className="mainheader py-4 text">Manage Friends</h1>
    <div className="input-card p-3 overflow-auto max-set-height">
     <input
      type="text"
@@ -42,7 +42,7 @@ function SetFriend() {
      </div>
     ))}
     <Link to={`/settings/${name}`}>
-     <button class="btn btn-dark btnx-d px-4 m-2 btn-lg stick2">Done</button>
+     <button class="btn btn-dark btnx-d px-4 m-2 btn-lg stick2 save">Done</button>
     </Link>
    </div>
   </div>
