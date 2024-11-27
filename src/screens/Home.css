@@ -9,7 +9,7 @@
  width: 100%;
  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
  border-radius: 20px;
- background-color: #AFC8A2;
+ background-color: #afc8a2;
  height: 250px;
 }
 
@@ -32,7 +32,7 @@
 #challengeDescription {
  margin-left: 20px;
  font-size: 20px;
- color: white;
+ color: #e8e1e0;
  text-align: left, top;
 }
 
@@ -63,7 +63,7 @@
  width: 40%;
  float: left;
  border-radius: 15px;
- background-color: #1D3953;
+ background-color: #1d3953;
  height: 80%;
 }
 
@@ -80,15 +80,18 @@
 }
 
 .circle-text {
- color: white;
+ color: #e8e1e0;
  font-size: 16px;
  font-weight: bold;
 }
 .maybeGame {
- border-radius: 100px;
+ border-radius: 30px;
  background-color: #467068;
+ color: #e8e1e0;
+ height: 150px;
+ padding: 30px;
 }
 
 .challenge-text {
-    color: white;
+ color: #e8e1e0;
 }

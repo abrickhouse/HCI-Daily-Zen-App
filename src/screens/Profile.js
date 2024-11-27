@@ -8,7 +8,7 @@ import React, { useState } from "react";
 
 function Profile() {
  const { name, other } = useParams();
- const [isFriends, setIsFriends] = useState(false);
+ const [isFriends, setIsFriends] = useState(true);
  const weekdays = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"].map(
   (day) => (
    <th className="day" key={day}>
@@ -56,7 +56,9 @@ function Profile() {
       <div className="info">
        <div className="wd-flex-row-container">
         <div>
-         <h2 className="name" id="name">{username}</h2>
+         <h2 className="name" id="profname">
+          {username}
+         </h2>
         </div>
         <div>{addFriend}</div>
        </div>
@@ -70,7 +72,6 @@ function Profile() {
       </div>
      </div>
     </div>
-    {/* Calendar */}
     <div className="cal-content">
      <h1 className="month text">November</h1>
      <table className="calendar">
@@ -79,8 +80,8 @@ function Profile() {
        {days}
       </thead>
      </table>
-   </div>
     </div>
+   </div>
   </div>
  );
 }

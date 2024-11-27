@@ -90,6 +90,8 @@ import logo from "../DailyZen.png";
 import { useFriends } from "./FriendsRequest"; // Import useFriends
 import Nav from "../Nav";
 import "./Community.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCircleUser } from "@fortawesome/free-solid-svg-icons";
 import Header from "../Header";
 
 function Community() {
@@ -121,57 +123,55 @@ function Community() {
    <div className="nav-container">
     <Nav name={name} />
    </div>
-    <div className="content">
-        <Header name={name} />
-        <div className="community-header">
-            <h2 className="mainheader mx-2 px-3 wide text">
-            Community
-            </h2>
-            <div>
-                <button
-                className="add-friend-btn white-text"
-                onClick={() => navigate("/add-friends")}
-                >
-                Add Friends
-                </button>
-            </div>
-        </div>
-
-        <div className="post-list mx-2 px-3">
-        {allPosts.map((post) => (
-        <div key={post.id} className="post">
-        <div className="post-header">
-            <Link className="post-name text" to={`/Profile/${name}/${post.name}`}>
-            {post.name}
-            </Link>
-            <span className="post-time white-text">{post.time}</span>
-        </div>
-        <div className="post-content white-text">{post.content}</div>
-        {post.imageUrl && (
-            <div
-            className="post-image"
-            onClick={() => handleImageClick(post.imageUrl)}
-            >
-            <img src={post.imageUrl} alt="Post content" className="post-img" />
-            <div className="overlay-text">Click to view</div>
-            </div>
-        )}
-        </div>
-        ))}
-        </div>
-
-        {isModalOpen && (
-        <div className="modal-overlay" onClick={handleCloseModal}>
-        <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-        <button className="close-button white-text" onClick={handleCloseModal}>
-            Back
-        </button>
-        <img src={selectedImageUrl} alt="Full view" className="modal-image" />
-        </div>
-        </div>
-        )}
-        
+   <div className="content">
+    <Header name={name} />
+    <div className="community-header">
+     <h2 className="mainheader mx-2 px-3 wide text">Community</h2>
+     <div>
+      <button
+       className="add-friend-btn white-text"
+       onClick={() => navigate("/add-friends")}
+      >
+       Add Friends
+      </button>
+     </div>
     </div>
+
+    <div className="post-list mx-2 px-3">
+     {allPosts.map((post) => (
+      <div key={post.id} className="post">
+       <div className="post-header">
+        <Link className="post-name text" to={`/Profile/${name}/${post.name}`}>
+         <FontAwesomeIcon icon={faCircleUser} size="1x" className="zIcon" />{" "}
+         {post.name}
+        </Link>
+        <span className="post-time light-text">{post.time}</span>
+       </div>
+       <div className="post-content light-text">{post.content}</div>
+       {post.imageUrl && (
+        <div
+         className="post-image"
+         onClick={() => handleImageClick(post.imageUrl)}
+        >
+         <img src={post.imageUrl} alt="Post content" className="post-img" />
+         <div className="overlay-text">Click to view</div>
+        </div>
+       )}
+      </div>
+     ))}
+    </div>
+
+    {isModalOpen && (
+     <div className="modal-overlay" onClick={handleCloseModal}>
+      <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+       <button className="close-button white-text" onClick={handleCloseModal}>
+        Back
+       </button>
+       <img src={selectedImageUrl} alt="Full view" className="modal-image" />
+      </div>
+     </div>
+    )}
+   </div>
   </div>
  );
 }

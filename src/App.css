@@ -3,35 +3,39 @@
 }
 
 body {
-    background-color: #E8E1E0;
+ background-color: #e8e1e0;
 }
 
 .text {
-    color: #1D3953;
+ color: #1d3953;
 }
 
 .white-text {
-    color: white;
-    font-size: 20px;
+ color: #e8e1e0;
+ font-size: 20px;
 }
 
 .font-size {
-    font-size: 20px;
+ font-size: 20px;
 }
 
 .save {
-    background-color: #467068;
-    color: white;
+ background-color: #467068;
+ color: #e8e1e0;
 }
 
 #name {
-    color: #AFC8A2;
-    word-wrap: break-word;
+ color: #afc8a2;
+ word-wrap: break-word;
+}
+#profname {
+ color: #1d3953;
+ word-wrap: break-word;
 }
 
 .add-friend-btn {
  background-color: #467068; /* Gray background */
- color: white; /* White text */
+ color: #e8e1e0; /* White text */
  border: none; /* No border */
  padding: 10px 20px; /* Adds space for an oval shape */
  font-size: 1rem; /* Adjust font size */
@@ -54,7 +58,6 @@ body {
  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Lighter shadow on click */
 }
 
-
 .nav-link {
  color: rgb(33, 33, 33);
  text-decoration: none;
@@ -65,8 +68,8 @@ body {
 }
 
 .nav-link:hover {
- color: rgb(40, 173, 164);
- background-color: #fff;
+ color: #467068;
+ background-color: #cdddc4;
  transition: color 0.5s ease;
  transition: background-color 0.65s ease;
 }
@@ -81,16 +84,15 @@ body {
  transition: background-color 0.65s ease;
 }
 .nav-btn:hover {
- color: rgb(40, 173, 164);
- background-color: rgb(222, 252, 242);
+ color: #467068;
  transition: color 0.5s ease;
- transition: background-color 0.65s ease;
+ background-color: #afc8a2;
 }
 
 .sidebar {
  height: 100vh;
  top: 0px;
- background-color: #AFC8A2;
+ background-color: #afc8a2;
  width: 20%;
  min-width: fit-content;
  position: sticky;
@@ -105,14 +107,14 @@ body {
 }
 
 .log-out-btn {
-    color:#ffffff;
-    background-color: #467068;
-    border-radius: 40%;
-    font-weight: 700;
-    padding: 8px 16px;
-    border-radius: 16px;
-    cursor: pointer;
-    border: none;
+ color: #ffffff;
+ background-color: #467068;
+ border-radius: 40%;
+ font-weight: 700;
+ padding: 8px 16px;
+ border-radius: 16px;
+ cursor: pointer;
+ border: none;
 }
 
 .btnx {
@@ -122,8 +124,8 @@ body {
  border-radius: 16px;
  cursor: pointer;
  border: none;
- background-color:#9a3838;
- color: white;
+ background-color: #1d3953;
+ color: #e8e1e0;
 }
 
 .btnx-d {
@@ -137,13 +139,13 @@ body {
 
 .mainheader {
  margin: auto;
- font-size: 54px;
+ font-size: 44px;
  font-weight: bold;
 }
 
 .partheader {
  margin: auto;
- font-size: 34px;
+ font-size: 30px;
  font-weight: bold;
 }
 
@@ -169,8 +171,8 @@ body {
 }
 
 .delete-btn {
-    color: #9a3838;
-    width: 200px;
+ background-color: #6a2525;
+ width: 200px;
 }
 
 .modal-overlay {
@@ -187,7 +189,7 @@ body {
 }
 .modal-content {
  position: relative;
- background-color: white;
+ background-color: #e8e1e0;
  padding: 20px;
  border-radius: 8px;
  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
@@ -200,7 +202,7 @@ body {
 }
 .del-screen {
  background-color: #000000;
- color: #fff;
+ color: #e8e1e0;
  height: 100vh;
  width: 100%;
  text-align: center;
@@ -209,10 +211,14 @@ body {
  width: 95%;
 }
 .nav-header {
- background-color: #fff;
+ background-color: #e8e1e0;
  width: 100vw;
  justify-content: center;
  z-index: 900;
+}
+.bg-whitex {
+ background-color: #cdddc4;
+ color: #467068;
 }
 .app-logo {
  max-width: 230px;
@@ -220,7 +226,7 @@ body {
 }
 .remove-link-style {
  text-decoration: none;
- --bs-list-group-border-color: white;
+ --bs-list-group-border-color: #e8e1e0;
  z-index: 10;
 }
 
@@ -280,4 +286,8 @@ body {
  line-height: 30px;
  border-radius: 15px;
  background-color: rgb(161, 243, 216);
+}
+
+.zIcon {
+ z-index: -1;
 }

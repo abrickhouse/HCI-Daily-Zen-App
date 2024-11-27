@@ -20,7 +20,7 @@ function Settings() {
      <h2 className="mainheader text">Settings</h2>
      {name ? (
       <div className="">
-       <ul class="py-4 wide">
+       <ul class="py-4 wide text">
         <Link className="remove-link-style" to={`/change-email/${name}`}>
          <li class="list-group-item py-3 d-flex justify-content-between">
           <h4>Change email</h4>
@@ -63,11 +63,11 @@ function Settings() {
         </Link>
        </ul>
        <Link to={`/home`}>
-        <button class="btn btn-light px-4 m-2 log-out-btn">Log out</button>
+        <button class="btn btn-secondary px-4 m-2 log-out-btn">Log out</button>
        </Link>
        <br />
        <button
-        class="btn btn-light px-4 m-2 btnx"
+        class="btn btn-secondary px-4 m-2 btnx"
         onClick={() => setIsModalOpen(true)}
        >
         Delete account

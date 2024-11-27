@@ -18,7 +18,7 @@ function Nav(props) {
    {name ? (
     <Link
      className={`nav-link px-3  ${
-      pathname.includes("profile") && "active bg-white"
+      pathname.includes("profile") && "active  bg-whitex"
      }`}
      to={`/profile/${name}`}
     >
@@ -54,16 +54,16 @@ function Nav(props) {
    {name ? (
     <Link
      className={`nav-link px-3 ${
-      pathname.includes("home") && "active bg-white"
+      pathname.includes("home") && "active bg-whitex"
      }`}
      to={`/home/${name}`}
     >
-     <h3 className="text">Home</h3>
+     <h3 className="">Home</h3>
     </Link>
    ) : (
     <Link
      className={`nav-link px-3   ${
-      pathname.includes("home") && "active bg-white"
+      pathname.includes("home") && "active  bg-whitex"
      }`}
      to={`/home/`}
     >
@@ -73,7 +73,7 @@ function Nav(props) {
    {name ? (
     <Link
      className={`nav-link px-3    ${
-      pathname.includes("community") && "active bg-white"
+      pathname.includes("community") && "active  bg-whitex"
      }`}
      to={`/community/${name}`}
     >
@@ -82,7 +82,7 @@ function Nav(props) {
    ) : (
     <Link
      className={`nav-link px-3   ${
-      pathname.includes("community") && "active bg-white"
+      pathname.includes("community") && "active  bg-whitex"
      }`}
      to="/community"
     >
@@ -92,7 +92,7 @@ function Nav(props) {
    {name ? (
     <Link
      className={`nav-link px-3   ${
-      pathname.includes("settings") && "active bg-white"
+      pathname.includes("settings") && "active bg-whitex"
      }`}
      to={`/settings/${name}`}
     >
@@ -101,7 +101,7 @@ function Nav(props) {
    ) : (
     <Link
      className={`nav-link px-3   ${
-      pathname.includes("settings") && "active bg-white"
+      pathname.includes("settings") && "active  bg-whitex"
      }`}
      to="/settings"
     >

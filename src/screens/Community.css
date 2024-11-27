@@ -1,164 +1,168 @@
 .main-content {
-    flex: 1;
-    background-color: #f5f5f5;
+ flex: 1;
+ background-color: #f5f5f5;
 }
 
 .community-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-bottom: 20px;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ padding-bottom: 20px;
 }
 
 .community-header h2 {
-    font-size: 54px;
-    font-weight: bold;
+ font-weight: bold;
 }
 
 .add-friends-button {
-    background-color: #467068;
-    border: none;
-    padding: 8px 16px;
-    border-radius: 16px;
-    font-size: 14px;
-    cursor: pointer;
-    width: 150px;
+ background-color: #467068;
+ border: none;
+ padding: 8px 16px;
+ border-radius: 16px;
+ font-size: 14px;
+ cursor: pointer;
+ width: 150px;
 }
 
 .post-list {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+ display: flex;
+ flex-direction: column;
+ gap: 20px;
 }
 
 /* Full-width post */
 .post {
-    background-color: #AFC8A2;
-    border-radius: 8px;
-    padding: 16px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    width: 100%; /* Full width within container */
-    margin-bottom: 20px; /* Space between posts */
+ background-color: #c3d7b9;
+ border-radius: 8px;
+ padding: 16px;
+ box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+ width: 100%; /* Full width within container */
+ margin-bottom: 20px; /* Space between posts */
 }
 
 /* Post header styling */
 .post-header {
-    display: flex;
-    justify-content: space-between;
-    font-size: 14px;
-    color: #666;
-    margin-bottom: 8px;
+ display: flex;
+ justify-content: space-between;
+ font-size: 14px;
+ color: #666;
+ margin-bottom: 8px;
 }
 
 .post-name {
-    font-weight: bold;
-    font-size: 25px;
+ font-weight: bold;
+ font-size: 25px;
 }
 
 .post-content {
-    font-size: 20px;
-    margin-bottom: 12px;
+ font-size: 20px;
+ margin-bottom: 12px;
 }
 
 /* Image container */
 .post-image {
-    margin-top: 12px;
-    width: 100%;
-    max-height: 300px;
-    overflow: hidden;
-    border-radius: 8px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative; /* Allows overlay positioning */
-    cursor: pointer;
+ margin-top: 12px;
+ width: 100%;
+ max-height: 300px;
+ overflow: hidden;
+ border-radius: 8px;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ position: relative; /* Allows overlay positioning */
+ cursor: pointer;
 }
 
 /* Image itself */
 .post-img {
-    width: 100%;
-    height: auto;
-    max-height: 100%;
-    object-fit: cover;
-    border-radius: 8px;
+ width: 100%;
+ height: auto;
+ max-height: 100%;
+ object-fit: cover;
+ border-radius: 8px;
 }
 
 .overlay-text {
-    position: absolute;
-    bottom: 10px;
-    color: white;
-    background-color: rgba(0, 0, 0, 0.6);
-    padding: 5px 10px;
-    border-radius: 4px;
-    opacity: 0;
-    transition: opacity 0.3s ease;
+ position: absolute;
+ bottom: 10px;
+ color: #e8e1e0;
+ background-color: rgba(0, 0, 0, 0.6);
+ padding: 5px 10px;
+ border-radius: 4px;
+ opacity: 0;
+ transition: opacity 0.3s ease;
 }
 
 .post-image:hover .overlay-text {
-    opacity: 1;
+ opacity: 1;
+}
+
+.light-text {
+ color: #467068;
 }
 
 /* Modal overlay */
 .modal-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.8);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    z-index: 1000;
+ position: fixed;
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 100%;
+ background-color: rgba(0, 0, 0, 0.8);
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ z-index: 1000;
 }
 
 /* Modal content */
 .modal-content {
-    position: relative;
-    background-color: white;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    max-width: 90%;
-    max-height: 90%;
-    overflow: auto;
+ position: relative;
+ background-color: #e8e1e0;
+ padding: 20px;
+ border-radius: 8px;
+ box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+ max-width: 90%;
+ max-height: 90%;
+ overflow: auto;
 }
 
 /* Close button */
 .close-button {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    background-color: #f0f0f0;
-    border: none;
-    padding: 8px 12px;
-    font-size: 14px;
-    border-radius: 4px;
-    cursor: pointer;
+ position: absolute;
+ top: 10px;
+ right: 10px;
+ background-color: #f5f5f5;
+ color: #467068;
+ border: none;
+ padding: 8px 12px;
+ font-size: 14px;
+ border-radius: 12px;
+ cursor: pointer;
 }
 
 /* Full-size image in modal */
 .modal-image {
-    max-width: 100%;
-    max-height: 80vh;
-    border-radius: 8px;
-    display: block;
-    margin-top: 20px;
+ max-width: 100%;
+ max-height: 80vh;
+ border-radius: 8px;
+ display: block;
+ margin-top: 20px;
 }
 
 a {
-    text-decoration: none; /* Removes the underline */
-    color: inherit; /* Inherits the color from the parent element */
-  }
-  
-.logo-container {
-display: flex;
-justify-content: center;
-align-items: center;
-margin-top: 20px; /* Adjust as needed */
+ text-decoration: none; /* Removes the underline */
+ color: inherit; /* Inherits the color from the parent element */
 }
-  
+
+.logo-container {
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ margin-top: 20px; /* Adjust as needed */
+}
+
 .logo {
-width: 230px; /* Adjust size */
-height: auto;
+ width: 230px; /* Adjust size */
+ height: auto;
 }
