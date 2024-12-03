@@ -63,7 +63,7 @@ function App() {
         element={<DailyChallenge component={<ColorMood />} />}
        />
        <Route
-        path="/daily-challenge/gratitude/"
+        path="/daily-challenge/gratitude/:name"
         element={<DailyChallenge component={<Gratitude />} />}
        />
        <Route
