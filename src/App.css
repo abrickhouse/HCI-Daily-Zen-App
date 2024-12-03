@@ -329,3 +329,6 @@ body {
 .zIcon {
  z-index: -1;
 }
+.bttm {
+ width: 120px;
+}

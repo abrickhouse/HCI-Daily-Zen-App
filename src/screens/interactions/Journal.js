@@ -55,7 +55,9 @@ const Journal = () => {
  return (
   <div className="container mt-5">
    <div className="text-center">
-    <h1 text className="text"> Mindful Journaling Prompt</h1>
+    <h1 text className="text">
+     Mindful Journaling Prompt
+    </h1>
     <h3 className="my-4 text">{prompt}</h3>
 
     <textarea

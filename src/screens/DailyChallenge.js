@@ -87,7 +87,7 @@ function DailyChallenge({ component }) {
     )}
 
     {showFinishButton && (
-     <div class="fixed-bottom py-4">
+     <div class="bttm fixed-bottom py-4">
       <button
        type="button"
        class="finish-button btn btn-secondary m-3 btnx d-flex align-items-end "
