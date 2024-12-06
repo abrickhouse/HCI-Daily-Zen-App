@@ -141,7 +141,7 @@ const handleShare = () => {
     </Modal>
     {showComingSoon && (
           <div className="alert alert-info coming-soon-message">
-            Feature coming soon!
+            Feature coming soon! Press the back arrow to exit the Daily Challenge.
           </div>
         )}
    </div>
