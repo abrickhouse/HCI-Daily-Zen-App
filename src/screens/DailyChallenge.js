@@ -3,6 +3,7 @@ import { useParams, Link } from "react-router-dom";
 import { Modal, Button } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
 import Header from "../Header";
+import "./DailyChallenge.css";
 
 function DailyChallenge({ component }) {
  const { name } = useParams();
@@ -11,6 +12,7 @@ function DailyChallenge({ component }) {
  const [showFinishButton, setShowFinishButton] = useState(false);
  const [hasInteracted, setHasInteracted] = useState(false);
  const [showModal, setShowModal] = useState(false);
+ const [showComingSoon, setShowComingSoon] = useState(false);
 
  useEffect(() => {
   const timer = setTimeout(() => {
@@ -54,14 +56,20 @@ function DailyChallenge({ component }) {
   }
  };
 
- const handleShare = () => {
-  handleCloseModal();
-  if (name) {
-   navigate(`/home/${name}`);
-  } else {
-   navigate(`/home/`);
-  }
- };
+//  const handleShare = () => {
+//   handleCloseModal();
+//   if (name) {
+//    navigate(`/home/${name}`);
+//   } else {
+//    navigate(`/home/`);
+//   }
+//  };
+
+const handleShare = () => {
+    setShowComingSoon(true); // Show the "feature coming soon" message
+    setTimeout(() => setShowComingSoon(false), 3000); // Hide after 3 seconds
+    setShowModal(false); // Close the modal
+  };
 
  return (
   <div className="wd-flex-row-container">
@@ -131,6 +139,11 @@ function DailyChallenge({ component }) {
       </button>
      </Modal.Footer>
     </Modal>
+    {showComingSoon && (
+          <div className="alert alert-info coming-soon-message">
+            Feature coming soon!
+          </div>
+        )}
    </div>
   </div>
  );
