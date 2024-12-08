@@ -4,8 +4,8 @@ This project was made by Amaiya Brickhouse, Teresa Liang, Sofie Cook, and Michel
 
 # Set up with `git clone` and `npm install`
 Copy the web url repo and run `git clone` with it to clone our project's scripts.
-
-Make sure npm is installed by running `npm install`.
+`git clone https://github.com/abrickhouse/HCI-Daily-Zen-App.git`
+`npm install`.
 
 ## Available Scripts
 
