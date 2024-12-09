@@ -2,7 +2,9 @@
 
 This project was made by Amaiya Brickhouse, Teresa Liang, Sofie Cook, and Michelle Coker
 
-# Get code with `git clone` or download the zip
+
+## Set up
+### Get code with `git clone` or download the zip
 First you must have node (version >=14) and npm installed.
 
 Copy the web url repo and run `git clone` with it to clone our project's scripts.
@@ -11,7 +13,7 @@ Copy the web url repo and run `git clone` with it to clone our project's scripts
 
 Or you can download the zip file.
 
-# Set up with `npm install`
+### Set up with `npm install`
 Then navigate to inside the project directory and run `npm install`.
 
 Finally, to run the project locally, run...
